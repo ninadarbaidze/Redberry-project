@@ -1,0 +1,64 @@
+body {
+    background-color: rgb(31, 31, 31);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img {
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    object-fit: fill;
+    z-index: -1;
+}
+
+h1 {
+    position: relative;
+    text-align: center;
+    font-size: 6rem;
+    color: #FE3B1F;
+    top: 9rem;
+}
+
+.action {
+    margin-top: 13rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    background-color: #FE3B1F;
+    font-family: 'Montserrat', sans-serif;
+    width: 25rem;
+    height: 5rem;
+    font-size: 1.5rem;
+    margin: 2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    border: none;
+
+}
+
+a {
+    font-size: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+.btn-text {
+    text-decoration: none;
+}
+
+.astronaut {
+    width: 23rem;
+    position: relative;
+    transform: rotate(-27.28deg);
+}
