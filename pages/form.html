@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,52 +9,66 @@
     <link href="https://fonts.googleapis.com/css2?family=Rowdies&display=swap" rel="stylesheet"> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="/styles/shared.css">
-    <link rel="stylesheet" href="/styles/forms.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="/Redberry-project/styles/shared.css" />
+    <link rel="stylesheet" href="/Redberry-project/styles/forms.css" />
     <title>Rocketeer</title>
-</head>
-<body>
+  </head>
+  <body>
     <main>
-        <div class="main-content">
+      <div class="main-content">
+           
+            <section class="page" id="page-1">
+                
+                <!-- left side -->
+                <div class="form" id="form-1">
+                    <form action="">
+                        <h2>Hey, Rocketeer, what are your coordinates?</h2>
+                        <div>
+                            <input type="text" name="first-name" id="first-name" placeholder="First Name" minlength="2" required/>
+                        </div>
+                        <div>
+                            <input type="text" name="last-name" id="last-name" placeholder="Last Name" minlength="2" required/>
+                        </div>
+                        <div>
+                            <input type="email" name="email" id="email" placeholder="E Mail" required/>
+                        </div>
+                        <div>
+                            <input type="number" name="number" id="number" placeholder="+995 5__ __ __ __"/>
+                        </div>
+                    </form>
+                    <div class="navigation">
+                        <div class="circles">
+                            <span id="circle-1" class="circle"></span>
+                            <span id="circle-2" class="circle"></span>
+                            <span id="circle-3" class="circle"></span>
+                            <span id="circle-4" class="circle"></span>
+                            <span id="circle-5" class="circle"></span>
+                        </div>
+                        <div class="arrows">
+        
+                        </div>
+                    </div>
 
-
-            <!-- left side -->
-            <section id="page-1">
-                <form action=""></form>
-                    <fieldset class="p1">
-                        <h1>Hey, Rocketeer, what are your coordinates?</h1>
-                        <div>
-                            <input type="text" name="first-name" id="first-name" placeholder="First Name">
-                        </div>
-                        <div>
-                            <input type="text" name="last-name" id="last-name" placeholder="Last Name">
-                        </div>
-                        <div>
-                            <input type="email" name="email" id="email" placeholder="E Mail">
-                        </div>
-                        <div>
-                            <input type="number" name="number" id="number" placeholder="+995 5__ __ __ __">
-                        </div>
-                    </fieldset>
-
-               <!-- right side -->
-                <div class="details-1">
+                </div>    
+                    
+                <!-- right side -->
+                <div class="details" id="details-1">
                     <article>
-                        <h1></h1>
-                        <p></p>
+                    <h2>Redberry Origins</h2>
+                    <p>
+                        You watch “What? Where? When?” Yeah. Our founders used to play
+                        it. That’s where they got a question about a famous American
+                        author and screenwriter Ray Bradbury. Albeit, our CEO Gaga
+                        Darsalia forgot the exact name and he answered Ray Redberry. And
+                        at that moment, a name for a yet to be born company was inspired
+                        - Redberry 😇
+                    </p>
                     </article>
-                </div>   
+                </div>
+            
+        </section>
 
-            </section>
-
-
-
-
-
-
-        </div>
-
-    </main>    
-</body>
+    </main>
+  </body>
 </html>

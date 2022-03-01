@@ -1,7 +1,9 @@
-h1 {
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1,
+h2 {
     font-family: 'Rowdies', sans-serif;
 }
 
-p {
-    font-family: 'Montserrat', sans-serif;
-}
