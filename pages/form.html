@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rowdies&display=swap" rel="stylesheet"> 
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet"> 
+
     <script src="https://kit.fontawesome.com/6ec54a2450.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/Redberry-project/styles/shared.css" />
     <link rel="stylesheet" href="/Redberry-project/styles/forms.css" />
@@ -24,13 +27,13 @@
                     <!-- PAGE 1 -->
                     <!-- left side -->
 
-                    <form action="" id="form-1">
+                    <form action="" id="form-1" class="field-form">
                         <h2>Hey, Rocketeer, what are your coordinates?</h2>
                         <div>
-                            <input type="text" name="first-name" id="first-name" placeholder="First Name" minlength="2" required/>
+                            <input type="text" name="first_name" id="first-name" placeholder="First Name" minlength="2" required/>
                         </div>
                         <div>
-                            <input type="text" name="last-name" id="last-name" placeholder="Last Name" minlength="2" required/>
+                            <input type="text" name="last_name" id="last-name" placeholder="Last Name" minlength="2" required/>
                         </div>
                         <div>
                             <input type="email" name="email" id="email" placeholder="E Mail" required/>
@@ -43,7 +46,7 @@
 
                     <!-- PAGE 2 -->
                     <!-- left side -->
-                    <form action="" id="form-2">
+                    <form action="" id="form-2" class="field-form">
                         <h2>Tell us about your skills</h2>
                         <div>
                             <select name="skills" id="skills"  required> 
@@ -86,12 +89,89 @@
                                  <button>
                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#FE3B1F" d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6 13h-12v-2h12v2z"/></svg>                                   
                                 </button>
-                               
-                           </li>
+                                </li>
                            
+                                
                             </ul>
              
                         </div>
+                    
+                    </form>
+
+
+                    <!-- PAGE 3 -->
+                    <!-- left side -->
+
+                    <form action="" id="form-3" class="mixed-form">
+
+                        <div class="content">
+                            <h2>Covid Stuff</h2>
+                                <p>How would you prefer to work?</p>
+
+                                <div class="radio-btn">
+                                    <input type="radio" id="preferedspace" name="work_preference" value="from_sairme">
+                                    <label for="preferedspace">From Sairme Office</label>
+                                </div>
+
+                                <div class="radio-btn">
+                                    <input type="radio" id="fromhome" name="work_preference" value="from_home">
+                                    <label for="fromhome">From Home</label>
+                                </div>
+
+                                <div class="radio-btn">
+                                    <input type="radio" id="hybrid" name="work_preference" value="hybrid">
+                                    <label for="hybrid">Hybrid</label>
+                                </div>
+
+                           
+                        </div>
+
+
+                        <div class="content">
+                                <p>Did you contact covid 19? :(</p>
+                                
+                                <div class="radio-btn">
+                                    <input type="radio" id="ycovid" name="had_covid" value="true">
+                                    <label for="ycovid">Yes</label>
+                                </div>
+
+                                <div class="radio-btn">
+                                    <input type="radio" id="ncovid" name="had_covid" value="false">
+                                    <label for="ncovid">No</label>
+                                </div>    
+
+                           
+                        </div>
+
+                        <div class="date content">
+                            <p>When?</p>
+                            <input type="text" name="had_covid_at" id="had_covid_at" onfocus="(this.type='date')" placeholder="Date"  required/>
+
+                        </div>
+
+
+                        <div class="content">
+                                <p>Have you been vaccinated?</p>
+
+                                <div class="radio-btn">
+                                    <input type="radio" id="yvaccinated" name="vaccinated" value="true">
+                                    <label for="yvaccinated">Yes</label>
+                                </div>    
+
+                                <div class="radio-btn">
+                                    <input type="radio" id="nvaccinated" name="vaccinated" value="false">
+                                    <label for="nvaccinated">No</label>
+                                </div>
+
+                           
+                        </div>
+                    
+                        <div class="date content">
+                            <p>When did you get your last covid vaccine?</p>
+                            <input type="text" name="vaccinated_at" id="vaccinated_at" onfocus="(this.type='date')" placeholder="Date" required/>
+
+                        </div>
+                    
                     
                     </form>
 
@@ -129,7 +209,7 @@
 
                     <!-- PAGE 2 -->
                     <!-- right side -->
-                    <article id="details-2">
+                        <article id="details-2">
                         <h2>A bit about our battles</h2>
                         <p>
                             As we said, Redberry has been on the field for quite some time now, 
@@ -139,6 +219,38 @@
                             Docker and Kubernetes, and now we have set foot in the web3 industry.
                         </p>
                         </article>
+
+
+                    <!-- PAGE 3 -->
+                    <!-- right side -->
+                        <article id="details-3">
+                        <h2>Redberry Covid Policies</h2>
+                        <p>
+                            As this infamous pandemic took over the world, we adjusted our working practices 
+                            so that our employees can be as safe and comfortable as possible. We have a hybrid work 
+                            environment, so you can either work from home or visit our lovely office on Sairme Street. 
+                            If it was up to us, we would love you to see us in the office because we think face-to-face 
+                            communications > Zoom meetings. Both on the fun and productivity scales.
+                        </p>
+                        </article>
+
+
+                    <!-- PAGE 4 -->
+                    <!-- right side -->
+                        <article id="details-4">
+                        <h2>Redberrian Insights</h2>
+                        <p>
+                            We were soo much fun before the pandemic started! Parties almost every weekend and 
+                            lavish employee birthday celebrations! Unfortunately, covid ruined that fun like it did 
+                            almost everything else in the world. But we try our best to zhuzh it up a bit. For example, 
+                            we host biweekly Devtalks where our senior and lead developers talk about topics they are 
+                            passionate about. Previous topics have included Web3, NFT, Laravel 9, Kubernetes, etc. 
+                            We hold these talks in the office but you can join our Zoom broadcast as well. Feel free 
+                            to join either as an attendee or a speaker!
+                        </p>
+                        </article>
+
+
                 </div>
             
                
