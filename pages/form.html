@@ -27,26 +27,30 @@
                     <!-- PAGE 1 -->
                     <!-- left side -->
 
-                    <form action="" id="form-1" class="field-form">
-                        <h2>Hey, Rocketeer, what are your coordinates?</h2>
-                        <div>
-                            <input type="text" name="first_name" id="first-name" placeholder="First Name" minlength="2" required/>
-                        </div>
-                        <div>
-                            <input type="text" name="last_name" id="last-name" placeholder="Last Name" minlength="2" required/>
-                        </div>
-                        <div>
-                            <input type="email" name="email" id="email" placeholder="E Mail" required/>
-                        </div>
-                        <div>
-                            <input type="number" name="number" id="number" placeholder="+995 5__ __ __ __"/>
-                        </div>
+                    <form action="" id="forms">
+
+                     <div id="form-1" class="field-form all">
+
+                         <h2>Hey, Rocketeer, what are your coordinates?</h2>
+                         <div>
+                             <input type="text" name="first_name" id="first-name" placeholder="First Name" minlength="2" required/>
+                         </div>
+                         <div>
+                             <input type="text" name="last_name" id="last-name" placeholder="Last Name" minlength="2" required/>
+                         </div>
+                         <div>
+                             <input type="email" name="email" id="email" placeholder="E Mail" required/>
+                         </div>
+                         <div>
+                             <input type="number" name="number" id="number" placeholder="+995 5__ __ __ __"/>
+                         </div>
+
+                     </div>   
                     
-                    </form>
 
                     <!-- PAGE 2 -->
                     <!-- left side -->
-                    <form action="" id="form-2" class="field-form">
+                    <div id="form-2" class="field-form all"> 
                         <h2>Tell us about your skills</h2>
                         <div>
                             <select name="skills" id="skills"  required> 
@@ -96,13 +100,13 @@
              
                         </div>
                     
-                    </form>
+                    </div>
 
 
                     <!-- PAGE 3 -->
                     <!-- left side -->
 
-                    <form action="" id="form-3" class="mixed-form">
+                    <div id="form-3" class="mixed-form all">
 
                         <div class="content">
                             <h2>Covid Stuff</h2>
@@ -139,9 +143,9 @@
                                     <input type="radio" id="ncovid" name="had_covid" value="false">
                                     <label for="ncovid">No</label>
                                 </div>    
-
                            
                         </div>
+
 
                         <div class="date content">
                             <p>When?</p>
@@ -171,12 +175,57 @@
                             <input type="text" name="vaccinated_at" id="vaccinated_at" onfocus="(this.type='date')" placeholder="Date" required/>
 
                         </div>
+                        
                     
-                    
+                    </div>
+
+                    <!-- PAGE 4 -->
+                    <!-- left side -->
+
+                    <div id="form-4" class="mixed-form all">
+
+                        <div class="content">
+                            <h2>What about you?</h2>
+                            <p>Would you attend Devtalks and maybe also organize your own?</p>
+                            
+                            <div class="radio-btn">
+                                <input type="radio" id="ydevtalks" name="will_organize_devtalk" value="true">
+                                <label for="ydevtalks">Yes</label>
+                            </div>
+
+                            <div class="radio-btn">
+                                <input type="radio" id="ncovid" name="will_organize_devtalk" value="false">
+                                <label for="ncovid">No</label>
+                            </div>    
+
+                        </div>
+
+                        <div class="content">
+                            <p>What would you speak about at Devtalk?</p>
+                            <textarea name="devtalk_topic" id="devtalk_topic" placeholder="I would..." cols="80" rows="10" required></textarea>
+                        </div>
+
+                        <div class="content">
+                            <p>Tell us something special</p>
+                            <textarea name="devtalk_topic" id="devtalk_topic" placeholder="I..." cols="80" rows="10" required></textarea>
+                        </div>
+
+                    </div>
+
+                    <!-- PAGE 5 -->
+                    <!-- left side -->
+
+                    <section class="submit-btn-page">
+
+                            <button type="submit">Submit</button>
+                            <a href="">go back</a>
+                        
+                    </section>
+
                     </form>
 
-                     
-                    <div class="navigation">
+
+                    <div class="navigation all">
                         <div class="circles">
                             <span class="arrow-circle"><span class="prev-arrow"></span></span>
                             <span id="circle-1" class="circle"></span>
@@ -191,7 +240,7 @@
                 </div>  
 
 
-                <div class="details">
+                <div class="details all">
                     <!-- PAGE 1 -->
                     <!-- right side -->
                         <article id="details-1">

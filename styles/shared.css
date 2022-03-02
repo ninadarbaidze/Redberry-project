@@ -5,5 +5,10 @@ body {
 h1,
 h2 {
     font-family: 'Rowdies', sans-serif;
+    color: #FE3B1F;
 }
 
+.thank-you {
+    margin: auto; 
+    
+}

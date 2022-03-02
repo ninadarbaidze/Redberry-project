@@ -2,7 +2,6 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
-
 }
 
 
@@ -105,6 +104,83 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     cursor: pointer;
 }
 
+textarea {
+    font-family: inherit;
+    font-size: 1rem;
+    width: 45rem;
+    height: 7rem;
+    padding-left: 2rem;
+    padding-top: 2rem;
+
+}
+
+#skills {
+    font-size: 1rem;
+    width: 32.5rem;
+    height: 3.3rem;
+    margin: 1.2rem;
+    padding-left: 4rem;
+    cursor: pointer;
+    background: white;
+    border: 1px solid #525557;
+    color: #5c5c5c;
+    font-family: inherit;
+    font-style: italic;
+    -moz-appearance:none; 
+    -webkit-appearance:none; 
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" transform="rotate(90)" width="15" height="15" viewBox="0 0 24 24"><path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" style="fill:%23FE3B1F;"/></svg>');
+    background-repeat: no-repeat;
+    background-position-x: 98%;
+    background-position-y: 50%;
+}
+
+
+
+.skills-button {
+    position: absolute;
+    width: 14rem;
+    height: 2.8rem;
+    background: #FE3B1F;
+    color: white;
+    font-family: inherit;
+    size: 0.7rem;
+    border: none;
+    margin: 2rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.skills-button:hover {
+    background: rgb(34, 34, 34)
+}
+
+.add-remove {
+    padding: 0;
+    margin-top: 8rem;
+
+}
+
+.add-remove li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+    font-size: 1rem;
+    width: 28rem;
+    height: 3.3rem;
+    margin: 1.2rem;
+    padding: 0 2rem;
+    border: 1px solid #525557;
+    color: #454545;
+    font-family: inherit;
+    font-style: italic;
+}
+
+.add-remove button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
 
 
 /* DETAILS Styling */
@@ -194,11 +270,15 @@ h2 {
 
 }
 
-#form-1,
+/* #form-1,
 #details-1,
 #form-2,
 #details-2,
-#details-3 {
+#details-3,
+#form-3,
+.navigation */
+.all
+ {
     display: none;
 } 
 
@@ -213,70 +293,40 @@ input[type=number] {
 }
 
 
-#skills {
-    font-size: 1rem;
-    width: 32.5rem;
-    height: 3.3rem;
-    margin: 1.2rem;
-    padding-left: 4rem;
-    cursor: pointer;
-    background: white;
-    border: 1px solid #525557;
-    color: #5c5c5c;
-    font-family: inherit;
-    font-style: italic;
-    -moz-appearance:none; 
-    -webkit-appearance:none; 
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" transform="rotate(90)" width="15" height="15" viewBox="0 0 24 24"><path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" style="fill:%23FE3B1F;"/></svg>');
-    background-repeat: no-repeat;
-    background-position-x: 98%;
-    background-position-y: 50%;
+.submit-btn-page {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(50% 50% at 50% 50%, #0C0D0E 0%, #151718 73.44%);
+    top: 0;
+    left: 0;
 }
 
 
-
-.skills-button {
-    position: absolute;
-    width: 14rem;
-    height: 2.8rem;
+.submit-btn-page button {
+    width: 24rem;
+    height: 5rem;
+    font-family: inherit;
+    font-size: 2.2rem;
     background: #FE3B1F;
     color: white;
-    font-family: inherit;
-    size: 0.7rem;
     border: none;
-    margin: 2rem;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.skills-button:hover {
-    background: rgb(34, 34, 34)
-}
-
-.add-remove {
-    padding: 0;
-    margin-top: 8rem;
+    border-radius: 50px;
+    margin-bottom: 2rem;;
+    /* position: fixed;
+    left: 758px;
+    top: 458px; */
 
 }
 
-.add-remove li {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    list-style: none;
-    font-size: 1rem;
-    width: 28rem;
-    height: 3.3rem;
-    margin: 1.2rem;
-    padding: 0 2rem;
-    border: 1px solid #525557;
-    color: #454545;
-    font-family: inherit;
-    font-style: italic;
+
+.submit-btn-page a {
+    color: white;
+    font-size: 1.7rem;
 }
 
-.add-remove button {
-    background: none;
-    border: none;
-    cursor: pointer;
-}
