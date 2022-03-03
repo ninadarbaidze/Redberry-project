@@ -13,7 +13,7 @@ body {
 
 /* FORM Styling */
 
-.form {
+.form-page {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -270,17 +270,40 @@ h2 {
 
 }
 
-/* #form-1,
-#details-1,
-#form-2,
-#details-2,
-#details-3,
-#form-3,
-.navigation */
-.all
- {
+/* Section show/hide parameteres */
+
+.page-1 {
     display: none;
-} 
+}
+
+.page-2 {
+    display: none;
+}
+
+.page-3 {
+    display: none;
+}
+
+.page-4 {
+    display: none;
+}
+
+#submit {
+    display: none;
+}
+
+.active,
+.active-detail {
+    display: block;
+}
+
+
+.circle-bold {
+    opacity: 1;
+}
+
+
+
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {

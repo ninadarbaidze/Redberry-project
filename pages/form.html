@@ -16,20 +16,23 @@
     <script src="https://kit.fontawesome.com/6ec54a2450.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/Redberry-project/styles/shared.css" />
     <link rel="stylesheet" href="/Redberry-project/styles/forms.css" />
+
+    <script src="/Redberry-project/scripts/app.js" defer></script>
+
     <title>Rocketeer</title>
   </head>
   <body>
     <main>           
             <section class="page">
                 
-                <div class="form">
+                <div class="form-page">
        
                     <!-- PAGE 1 -->
                     <!-- left side -->
 
                     <form action="" id="forms">
 
-                     <div id="form-1" class="field-form all">
+                     <div id="form-1" class="field-form form all page-1 active">
 
                          <h2>Hey, Rocketeer, what are your coordinates?</h2>
                          <div>
@@ -50,7 +53,7 @@
 
                     <!-- PAGE 2 -->
                     <!-- left side -->
-                    <div id="form-2" class="field-form all"> 
+                    <div id="form-2" class="field-form form all page-2"> 
                         <h2>Tell us about your skills</h2>
                         <div>
                             <select name="skills" id="skills"  required> 
@@ -106,7 +109,7 @@
                     <!-- PAGE 3 -->
                     <!-- left side -->
 
-                    <div id="form-3" class="mixed-form all">
+                    <div id="form-3" class="mixed-form form all page-3">
 
                         <div class="content">
                             <h2>Covid Stuff</h2>
@@ -182,7 +185,7 @@
                     <!-- PAGE 4 -->
                     <!-- left side -->
 
-                    <div id="form-4" class="mixed-form all">
+                    <div id="form-4" class="mixed-form form all page-4">
 
                         <div class="content">
                             <h2>What about you?</h2>
@@ -215,7 +218,7 @@
                     <!-- PAGE 5 -->
                     <!-- left side -->
 
-                    <section class="submit-btn-page">
+                    <section id="submit" class="submit-btn-page form page-5">
 
                             <button type="submit">Submit</button>
                             <a href="">go back</a>
@@ -227,13 +230,13 @@
 
                     <div class="navigation all">
                         <div class="circles">
-                            <span class="arrow-circle"><span class="prev-arrow"></span></span>
-                            <span id="circle-1" class="circle"></span>
+                            <span id="prev-arrow" class="arrow-circle"><span class="prev-arrow"></span></span>
+                            <span id="circle-1" class="circle circle-bold"></span>
                             <span id="circle-2" class="circle"></span>
                             <span id="circle-3" class="circle"></span>
                             <span id="circle-4" class="circle"></span>
                             <span id="circle-5" class="circle"></span>
-                            <span class="arrow-circle"><span class="next-arrow"></span></span>
+                            <span id="next-arrow" class="arrow-circle"><span class="next-arrow"></span></span>
                         </div>
                     </div>
 
@@ -243,7 +246,7 @@
                 <div class="details all">
                     <!-- PAGE 1 -->
                     <!-- right side -->
-                        <article id="details-1">
+                        <article id="details-1" class="page-1 detail active-detail">
                         <h2>Redberry Origins</h2>
                         <p>
                             You watch “What? Where? When?” Yeah. Our founders used to play
@@ -258,7 +261,7 @@
 
                     <!-- PAGE 2 -->
                     <!-- right side -->
-                        <article id="details-2">
+                        <article id="details-2" class="page-2 detail">
                         <h2>A bit about our battles</h2>
                         <p>
                             As we said, Redberry has been on the field for quite some time now, 
@@ -272,7 +275,7 @@
 
                     <!-- PAGE 3 -->
                     <!-- right side -->
-                        <article id="details-3">
+                        <article id="details-3" class="page-3 detail">
                         <h2>Redberry Covid Policies</h2>
                         <p>
                             As this infamous pandemic took over the world, we adjusted our working practices 
@@ -286,7 +289,7 @@
 
                     <!-- PAGE 4 -->
                     <!-- right side -->
-                        <article id="details-4">
+                        <article id="details-4" class="page-4 detail">
                         <h2>Redberrian Insights</h2>
                         <p>
                             We were soo much fun before the pandemic started! Parties almost every weekend and 
