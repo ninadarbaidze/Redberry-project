@@ -197,7 +197,7 @@ textarea {
 
 .details article {
     width: 41rem;
-    height: 100%;
+    padding-bottom: 40%;
 }
 
 h2 {
@@ -222,7 +222,7 @@ h2 {
     text-align: left;
 }
 
-.navigation {
+#navigation {
     margin-bottom: 10rem;
 }
 
@@ -270,51 +270,6 @@ h2 {
 
 }
 
-/* Section show/hide parameteres */
-
-.page-1 {
-    display: none;
-}
-
-.page-2 {
-    display: none;
-}
-
-.page-3 {
-    display: none;
-}
-
-.page-4 {
-    display: none;
-}
-
-#submit {
-    display: none;
-}
-
-.active,
-.active-detail {
-    display: block;
-}
-
-
-.circle-bold {
-    opacity: 1;
-}
-
-
-
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-input[type=number] {
-  -moz-appearance: textfield;
-}
-
 
 .submit-btn-page {
     position: absolute;
@@ -340,16 +295,63 @@ input[type=number] {
     color: white;
     border: none;
     border-radius: 50px;
-    margin-bottom: 2rem;;
-    /* position: fixed;
-    left: 758px;
-    top: 458px; */
+    margin-bottom: 2rem;
+    cursor: pointer;
 
 }
 
 
-.submit-btn-page a {
+.submit-btn-page p {
     color: white;
     font-size: 1.7rem;
+    text-decoration: underline;
+    cursor: pointer;
 }
+
+
+
+/* Section show/hide parameteres */
+
+.page-1 {
+    display: none;
+}
+
+.page-2 {
+    display: none;
+}
+
+.page-3 {
+    display: none;
+}
+
+.page-4 {
+    display: none;
+}
+
+.submit {
+    display: none;
+}
+
+.active,
+.active-detail {
+    display: block;
+}
+
+
+.circle-bold {
+    opacity: 1;
+}
+
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 
