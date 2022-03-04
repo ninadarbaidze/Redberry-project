@@ -19,6 +19,7 @@
 
     <script src="/Redberry-project/scripts/validation.js" defer></script>
     <script src="/Redberry-project/scripts/app.js" defer></script>
+    <script src="/Redberry-project/scripts/form-logic.js" defer></script>
     <script src="/Redberry-project/scripts/event-handlers.js" defer></script>
 
 
@@ -162,10 +163,10 @@
                         </div>
 
 
-                        <div class="date content">
+                        <div class="date content hidden">
                             <p>When?</p>
                             <input type="text" name="had_covid_at" id="had_covid_at" onfocus="(this.type='date')" placeholder="Date"  required/>
-                            <p class="error"></p>
+                            <p class="error" style="top: 0.3rem; right: 4rem;"></p>
 
                         </div>
 
@@ -187,10 +188,10 @@
                            
                         </div>
                     
-                        <div class="date content">
+                        <div class="date content hidden">
                             <p>When did you get your last covid vaccine?</p>
                             <input type="text" name="vaccinated_at" id="vaccinated_at" onfocus="(this.type='date')" placeholder="Date" required/>
-                            <p class="error"></p>
+                            <p class="error" style="top: 0.3rem; right: 4rem;"></p>
 
                         </div>
                         

@@ -209,6 +209,8 @@ textarea {
     top: -1.2rem;
 }
 
+
+
 /* DETAILS Styling */
 
 .details {
@@ -338,25 +340,15 @@ h2 {
 
 /* Section show/hide parameteres */
 
-.page-1 {
+.page-1,
+.page-2,
+.page-3,
+.page-4,
+.submit,
+.hidden {
     display: none;
 }
 
-.page-2 {
-    display: none;
-}
-
-.page-3 {
-    display: none;
-}
-
-.page-4 {
-    display: none;
-}
-
-.submit {
-    display: none;
-}
 
 .active,
 .active-detail {

@@ -18,7 +18,6 @@ let circles = Array.from(document.querySelectorAll('.circle'));
  
 let errorMessage = document.getElementsByClassName('error');
 let radioError = document.getElementsByClassName('radio-error')
-console.log(radioError)
 
 
 
@@ -31,12 +30,20 @@ let number = document.getElementById('number');
 
 // get covid stuff
 
-let workPreferenceRadio1 = document.getElementById("preferedspace");
-let workPreferenceRadio2 = document.getElementById("fromhome");
+let workPreferenceRadio1 = document.getElementById('preferedspace');
+let workPreferenceRadio2 = document.getElementById('fromhome');
 let workPreferenceRadio3 = document.getElementById("hybrid");
 
-let covidPositive = document.getElementById("ycovid");
-let covidNegative = document.getElementById("ncovid");
+let covidPositive = document.getElementById('ycovid');
+let covidNegative = document.getElementById('ncovid');
+
+let hiddenContainer = document.getElementsByClassName('hidden');
+let hadCovidAt = document.getElementById('had_covid_at');
+
+let vaccinePositive = document.getElementById('yvaccinated');
+let vaccineNegative = document.getElementById('nvaccinated');
+
+let vaccinatedAt = document.getElementById('vaccinated_at');
 
 
 //about you

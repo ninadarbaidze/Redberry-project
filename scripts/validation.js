@@ -99,7 +99,7 @@ function checkSkills() {
 //Check PAGE 3
 
 function CheckCovid() {
-    let valid = true
+    let valid = true;
 
     if(workPreferenceRadio1.checked !== true && workPreferenceRadio2.checked !== true && workPreferenceRadio3.checked !== true) {
         setRadioError('*this field is required', 0)
@@ -109,13 +109,29 @@ function CheckCovid() {
     }
 
 
-    if(covidPositive.checked !== true && covidNegative !== true) {
+    if(covidPositive.checked !== true && covidNegative.checked !== true) {
         setRadioError('*this field is required', 1)
         valid = false;
     } else {
         setRadioSuccess(1);
     }
 
+
+    if(hiddenContainer[0].style.display === "block" && hadCovidAt.value === '') {
+        console.log(hadCovidAt.value)
+        setError(hadCovidAt, '*this field is required')
+        valid = false;
+    } else {
+        setSuccess(hadCovidAt)
+    }
+
+    if(hiddenContainer[1].style.display === "block" && vaccinatedAt.value === '') {
+        console.log(vaccinatedAt.value)
+        setError(vaccinatedAt, '*this field is required')
+        valid = false;
+    } else {
+        setSuccess(vaccinatedAt)
+    }
 
 
     return valid;
