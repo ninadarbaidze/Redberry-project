@@ -18,7 +18,7 @@ let circles = Array.from(document.querySelectorAll('.circle'));
  
 let errorMessage = document.getElementsByClassName('error');
 let radioError = document.getElementsByClassName('radio-error')
-
+console.log(radioError)
 
 
 
@@ -40,8 +40,8 @@ let covidNegative = document.getElementById("ncovid");
 
 
 //about you
-let orginizedDevtalks = document.getElementById('ydevtalks')
-let notOrginizedDevtalks = document.getElementById('ndevtalks')
+let orginizedDevtalks = document.getElementById('ydevtalks');
+let notOrginizedDevtalks = document.getElementById('ndevtalks');
 
 let devTheme = document.getElementById('devtalk_topic');
 let special = document.getElementById('something_special');
@@ -107,6 +107,3 @@ function goBack() {
 
 
 //validation code
-
-
-

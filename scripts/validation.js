@@ -1,4 +1,3 @@
-
 //email and phone validation regex
 const isValidEmail = (email) => {
     return String(email)
@@ -33,13 +32,9 @@ function checkValidation(index) {
     
 }
 
-// let orginizedDevtalks = document.getElementById('ydevtalks')
-// let notOrginizedDevtalks = document.getElementById('ndevtalks')
 
-// let devTheme = document.getElementById('devtalk_topic');
-// let special = document.getElementById('something_special');
 
-//Check PAGE 3
+//Check PAGE 4
 
 function checkDevTalks() {
     let valid = true;
@@ -47,9 +42,10 @@ function checkDevTalks() {
     const specialValue = special.value.trim();
 
     if(orginizedDevtalks.checked !== true && notOrginizedDevtalks.checked !== true) {
-        setRadioError('*this field is required', 2)
+        setRadioError('*this field is required', 3)
+        valid = false;
     } else {
-        setRadioSuccess(2);
+        setRadioSuccess(3);
     };
 
     if(devThemeValue === '') {
@@ -184,8 +180,5 @@ function setSuccess(element) {
     errorDisplay.innerHTML = '';
     element.classList.remove('error-input');    
 }
-
-
-
 
 
