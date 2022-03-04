@@ -116,9 +116,15 @@ function CheckCovid() {
         setRadioSuccess(1);
     }
 
+    if(vaccinePositive.checked !== true && vaccinePositive.checked !== true) {
+        setRadioError('*this field is required', 2)
+        valid = false;
+    } else {
+        setRadioSuccess(2);
+    }
+
 
     if(hiddenContainer[0].style.display === "block" && hadCovidAt.value === '') {
-        console.log(hadCovidAt.value)
         setError(hadCovidAt, '*this field is required')
         valid = false;
     } else {
@@ -126,7 +132,6 @@ function CheckCovid() {
     }
 
     if(hiddenContainer[1].style.display === "block" && vaccinatedAt.value === '') {
-        console.log(vaccinatedAt.value)
         setError(vaccinatedAt, '*this field is required')
         valid = false;
     } else {

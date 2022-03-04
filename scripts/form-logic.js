@@ -34,12 +34,3 @@ vaccineNegative.addEventListener('click', () => {
 });
 
 
-
-
-
-// vaccinePositive.addEventListener('click', addVaccineDate)
-// vaccineNegative.addEventListener('click', removeVaccineDate)
-
-
-
-
