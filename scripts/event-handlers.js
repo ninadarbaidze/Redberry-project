@@ -1,7 +1,9 @@
+
 //change section handlers
 prevArrowButton.addEventListener('click', () => {changePage('prev')});
 
 nextArrowButton.addEventListener('click', () => {changePage('next')});
+
 
 
 
@@ -10,7 +12,8 @@ function changePage (arrow) {
     const activePage = document.querySelector('.active');
 
     let index = formSections.indexOf(activePage);
-    
+    console.log(index)
+    console.log(checkValidation(index))
     formSections[index].classList.remove('active');
     detailsSections[index].classList.remove('active-detail');
     
@@ -36,6 +39,9 @@ function changePage (arrow) {
     };
 
 }
+
+
+
 
 
 goBackButton.addEventListener('click', goBack);

@@ -34,75 +34,6 @@ function checkValidation(index) {
 
 
 
-//Check PAGE 4
-
-function checkDevTalks() {
-    let valid = true;
-    const devThemeValue = devTheme.value.trim();
-    const specialValue = special.value.trim();
-
-    if(orginizedDevtalks.checked !== true && notOrginizedDevtalks.checked !== true) {
-        setRadioError('*this field is required', 3)
-        valid = false;
-    } else {
-        setRadioSuccess(3);
-    };
-
-    if(devThemeValue === '') {
-        setError(devTheme, '*this field is required')
-        valid = false;
-    } else {
-        setSuccess(devTheme);
-    };
-
-    if(specialValue === '') {
-        setError(special, '*this field is required')
-        valid = false;
-    } else {
-        setSuccess(special);
-    };
-
-    return valid;
-}
-
-//Check PAGE 3
-
-function CheckCovid() {
-    let valid = true
-
-    if(workPreferenceRadio1.checked !== true && workPreferenceRadio2.checked !== true && workPreferenceRadio3.checked !== true) {
-        setRadioError('*this field is required', 0)
-        valid = false;
-    } else {
-        setRadioSuccess(0);
-    }
-
-
-    if(covidPositive.checked !== true && covidNegative !== true) {
-        setRadioError('*this field is required', 1)
-        valid = false;
-    } else {
-        setRadioSuccess(1);
-    }
-
-
-
-    return valid;
-}
-
-
-
-
-
-//Check PAGE 2
-
-function checkSkills() {
-    return true;
-
-}
-    
-    
-
 //Check PAGE 1
 
 function checkPersonalInfo() {
@@ -153,6 +84,79 @@ function checkPersonalInfo() {
     return valid;
 
 }
+
+
+
+//Check PAGE 2
+
+function checkSkills() {
+    return true;
+
+}
+  
+
+
+//Check PAGE 3
+
+function CheckCovid() {
+    let valid = true
+
+    if(workPreferenceRadio1.checked !== true && workPreferenceRadio2.checked !== true && workPreferenceRadio3.checked !== true) {
+        setRadioError('*this field is required', 0)
+        valid = false;
+    } else {
+        setRadioSuccess(0);
+    }
+
+
+    if(covidPositive.checked !== true && covidNegative !== true) {
+        setRadioError('*this field is required', 1)
+        valid = false;
+    } else {
+        setRadioSuccess(1);
+    }
+
+
+
+    return valid;
+}
+
+
+
+
+//Check PAGE 4
+
+function checkDevTalks() {
+    let valid = true;
+    const devThemeValue = devTheme.value.trim();
+    const specialValue = special.value.trim();
+
+    if(orginizedDevtalks.checked !== true && notOrginizedDevtalks.checked !== true) {
+        setRadioError('*this field is required', 3)
+        valid = false;
+    } else {
+        setRadioSuccess(3);
+    };
+
+    if(devThemeValue === '') {
+        setError(devTheme, '*this field is required')
+        valid = false;
+    } else {
+        setSuccess(devTheme);
+    };
+
+    if(specialValue === '') {
+        setError(special, '*this field is required')
+        valid = false;
+    } else {
+        setSuccess(special);
+    };
+
+    return valid;
+}
+
+  
+    
 
 
 
