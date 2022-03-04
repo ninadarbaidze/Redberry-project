@@ -183,6 +183,32 @@ textarea {
 }
 
 
+.error {
+    font-size: 1rem !important;
+    color: #FE3B1F;
+    font-style: italic;
+    padding-left: 5rem;
+    position: relative;
+    top: -1.3rem;
+    
+}
+
+
+
+.error-input  {
+    border: 2px solid #FE3B1F !important;
+}
+
+.radio-error {
+    font-size: 1rem !important;
+    color: #FE3B1F;
+    font-style: italic;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    position: relative;
+    top: -1.2rem;
+}
+
 /* DETAILS Styling */
 
 .details {

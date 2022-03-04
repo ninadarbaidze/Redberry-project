@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="/Redberry-project/styles/shared.css" />
     <link rel="stylesheet" href="/Redberry-project/styles/forms.css" />
 
+    <script src="/Redberry-project/scripts/validation.js" defer></script>
     <script src="/Redberry-project/scripts/app.js" defer></script>
 
     <title>Rocketeer</title>
@@ -30,22 +31,27 @@
                     <!-- PAGE 1 -->
                     <!-- left side -->
 
-                    <form action="" id="forms">
+                    <form action="/" method="POST" id="forms">
 
                      <div id="form-1" class="field-form form all page-1 active">
 
                          <h2>Hey, Rocketeer, what are your coordinates?</h2>
                          <div>
                              <input type="text" name="first_name" id="first-name" placeholder="First Name" minlength="2" required/>
+                             <p class="error"></p>
                          </div>
                          <div>
                              <input type="text" name="last_name" id="last-name" placeholder="Last Name" minlength="2" required/>
+                             <p class="error"></p>
                          </div>
                          <div>
                              <input type="email" name="email" id="email" placeholder="E Mail" required/>
+                             <p class="error"></p>
                          </div>
                          <div>
-                             <input type="number" name="number" id="number" placeholder="+995 5__ __ __ __"/>
+                             <input type="text" name="number" id="number" placeholder="+995 5__ __ __ __"/>
+                             <p class="error"></p>
+
                          </div>
 
                      </div>   
@@ -129,6 +135,7 @@
                                     <input type="radio" id="hybrid" name="work_preference" value="hybrid">
                                     <label for="hybrid">Hybrid</label>
                                 </div>
+                                <p class="radio-error"></p>
 
                            
                         </div>
@@ -146,6 +153,8 @@
                                     <input type="radio" id="ncovid" name="had_covid" value="false">
                                     <label for="ncovid">No</label>
                                 </div>    
+                                <p class="radio-error"></p>
+
                            
                         </div>
 
@@ -153,6 +162,7 @@
                         <div class="date content">
                             <p>When?</p>
                             <input type="text" name="had_covid_at" id="had_covid_at" onfocus="(this.type='date')" placeholder="Date"  required/>
+                            <p class="error"></p>
 
                         </div>
 
@@ -169,6 +179,7 @@
                                     <input type="radio" id="nvaccinated" name="vaccinated" value="false">
                                     <label for="nvaccinated">No</label>
                                 </div>
+                                <p class="radio-error"></p>
 
                            
                         </div>
@@ -176,6 +187,7 @@
                         <div class="date content">
                             <p>When did you get your last covid vaccine?</p>
                             <input type="text" name="vaccinated_at" id="vaccinated_at" onfocus="(this.type='date')" placeholder="Date" required/>
+                            <p class="error"></p>
 
                         </div>
                         
@@ -200,17 +212,22 @@
                                 <input type="radio" id="ncovid" name="will_organize_devtalk" value="false">
                                 <label for="ncovid">No</label>
                             </div>    
+                            <p class="radio-error"></p>
 
                         </div>
 
                         <div class="content">
                             <p>What would you speak about at Devtalk?</p>
                             <textarea name="devtalk_topic" id="devtalk_topic" placeholder="I would..." cols="80" rows="10" required></textarea>
+                            <p class="error" style="top: 0.2rem; right: 4rem"></p>
+
                         </div>
 
                         <div class="content">
                             <p>Tell us something special</p>
-                            <textarea name="devtalk_topic" id="devtalk_topic" placeholder="I..." cols="80" rows="10" required></textarea>
+                            <textarea name="something_special" id="something_special" placeholder="I..." cols="80" rows="10" required></textarea>
+                            <p class="error" style="top: 0.2rem; right: 4rem"></p>
+
                         </div>
 
                     </div>
@@ -233,13 +250,14 @@
 
                     <div id="navigation">
                         <div class="circles" class="navigation-container">
-                            <span id="prev-arrow" class="arrow-circle"><span class="prev-arrow"></span></span>
+                            <span id="prev-arrow" class="arrow-circle"><span class="prev-arrow" ></span></span>
                             <span id="circle-1" class="circle circle-bold"></span>
                             <span id="circle-2" class="circle"></span>
                             <span id="circle-3" class="circle"></span>
                             <span id="circle-4" class="circle"></span>
                             <span id="circle-5" class="circle"></span>
                             <span id="next-arrow" class="arrow-circle"><span class="next-arrow"></span></span>
+                            <!-- <button type="button"></button> -->
                         </div>
                     </div>
 
