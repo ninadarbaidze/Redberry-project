@@ -90,8 +90,18 @@ function checkPersonalInfo() {
 //Check PAGE 2
 
 function checkSkills() {
-    return true;
-
+    let valid = true;
+    if(addRemoveUlList.children.length === 0) {
+        setError(skillsInput, '*you should choose and add at least 1 skill')
+        valid = false;
+    }  else if(yearsOfExperience.value === '') {
+            setError(yearsOfExperience, '*this field is required')
+            valid = false;
+    } else {
+        setSuccess(yearsOfExperience);
+        setSuccess(skillsInput)
+    }
+    return valid;
 }
   
 

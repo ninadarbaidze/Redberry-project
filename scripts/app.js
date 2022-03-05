@@ -27,6 +27,9 @@ let surname = document.getElementById('last-name');
 let email = document.getElementById('email');
 let number = document.getElementById('number');
 
+//get skills
+let skillsInput = document.getElementById('skills');
+
 
 // get covid stuff
 
