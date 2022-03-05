@@ -57,3 +57,45 @@ let devTheme = document.getElementById('devtalk_topic');
 let special = document.getElementById('something_special');
 
 
+let myForm = document.getElementById('forms')
+
+async function saveComment(event) {
+    event.preventDefault(); //same as const commentsForm = document.querySelector("#form-control form");
+  
+      const comment = {
+          token: "25bb5876-dd5f-4588-bf18-0b00ca1353e5",
+          first_name: "nanu",
+          last_name: "gelashvili",
+          email: "gelashvili@gela.ge",
+          phone: "+995591933382",
+          skills: [
+            {
+              id: 1,
+              "experience": 3
+            }
+          ],
+          work_preference: "from_home",
+          had_covid: true,
+          had_covid_at: "2022-02-23",
+          vaccinated: true,
+          vaccinated_at: "2022-02-23",
+          will_organize_devtalk: true,
+          devtalk_topic: "I would ...",
+          something_special: "I am special!"
+        }
+  //   try {
+    const response = await fetch(
+      "https://bootcamp-2022.devtest.ge/api/application",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(comment)
+      }
+    );
+    
+  }
+  
+  myForm.addEventListener("submit", saveComment);
+  

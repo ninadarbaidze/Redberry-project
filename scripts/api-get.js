@@ -43,10 +43,7 @@ getSkills();
 let addSkillsButton = document.getElementById('add-skills');
 let addRemoveUlList = document.getElementById('add-remove');
 let yearsOfExperience = document.getElementById('experience-years');
-// let skillName = document.getElementsByClassName('skill-name');
-// let years = document.getElementsByClassName('years');
-// let skillsListItem = document.getElementsByClassName('skills-list-item');
-// let optionsListss = document.querySelectorAll('.option-list')
+
 
 
 
@@ -58,8 +55,8 @@ function addSkillsContainer() {
         //check years of experience validation
     setSuccess(skillsInput);
     if(yearsOfExperience.value === '') {
-    setError(yearsOfExperience, 'this field is required')
-        return;    
+        setError(yearsOfExperience, '*this field is required');
+        return;
     } else {
             setSuccess(yearsOfExperience);
     }

@@ -1,7 +1,7 @@
 //covid logif stuff
 
 
-function manageCovidDate(answer) {
+const manageCovidDate = (answer) => {
     switch(answer) {
         case 'positive-covid':
             return hiddenContainer[0].style.display = 'block';

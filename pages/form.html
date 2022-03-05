@@ -19,7 +19,7 @@
 
     <script src="/Redberry-project/scripts/validation.js" defer></script>
     <script src="/Redberry-project/scripts/app.js" defer></script>
-    <script src="/Redberry-project/scripts/api-req-res.js" defer></script>
+    <script src="/Redberry-project/scripts/api-get.js" defer></script>
     <script src="/Redberry-project/scripts/form-logic.js" defer></script>
     <script src="/Redberry-project/scripts/event-handlers.js" defer></script>
 
@@ -36,7 +36,7 @@
                     <!-- PAGE 1 -->
                     <!-- left side -->
 
-                    <form action="/" method="POST" id="forms">
+                    <form method="POST" id="forms">
 
                      <div id="form-1" class="field-form form all page-1 active">
 
@@ -68,7 +68,7 @@
                         <h2>Tell us about your skills</h2>
                         <div>
                             <select name="skills" id="skills"  required> 
-                                <option value="" disabled selected hidden >Skills</option>
+                                <!-- <option value="" disabled selected hidden >Skills</option> -->
                           
                             </select>
                             <p class="error"></p>
@@ -225,7 +225,7 @@
                     <div class="submit form page-5">
 
 
-                        <section id="submit" class="submit-btn-page">
+                        <section class="submit-btn-page">
     
                                 <button type="submit">Submit</button>
                                 <p id="go-back">go back</p>
