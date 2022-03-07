@@ -87,13 +87,13 @@ async function saveComment(event) {
 
 
     
-let workPefereneceValue;
-let workPreferenece = document.getElementsByName('work_preference').forEach(radio => {
+let workPefereneceValue =document.querySelector('input[name="work_preference"]:checked')
+// let workPreferenece = document.getElementsByName('work_preference').forEach(radio => {
   
-  if(radio.checked) {
-    workPefereneceValue = radio.value
-  }
-});
+//   if(radio.checked) {
+//     workPefereneceValue = radio.value
+//   }
+// });
 
 
 let covidvalue;
@@ -126,7 +126,7 @@ let devTalks = document.getElementsByName('will_organize_devtalk').forEach(radio
           last_name: surname.value,
           email: email.value,
           phone: number.value,
-          work_preference: workPefereneceValue,
+          work_preference: workPefereneceValue.value,
           had_covid: covidvalue === 'yes'? true : false,
           had_covid_at: hadCovidAt.value,
           vaccinated: vaccineValue === 'yes'? true : false,
@@ -152,9 +152,7 @@ let devTalks = document.getElementsByName('will_organize_devtalk').forEach(radio
       {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
-          "Sec-Fetch-Mode": "no-cors"
-	
+          "Content-Type": "application/json",	
         },
         body: JSON.stringify(comment)
       }
@@ -165,52 +163,7 @@ let devTalks = document.getElementsByName('will_organize_devtalk').forEach(radio
   myForm.addEventListener("submit", saveComment);
   
 
-  // let obj = {}
-  // let list;
-  // let years = document.getElementsByClassName('years');
-  // let listId = document.getElementsByClassName('choosen-skills-li');
 
-  
-
-  // class Do {
-  //     aba() {
-  //     for (let i = 0; i < listId.length; i++) {
-  //       this.id = listId[i].dataset.id,
-  //       this.experience = years[i].innerText
-  //     }
-  //     return this
-
-  //   }
-
-  // }
-  
-  // let obj22 = new Do;
-  
-
-// function doIt() {
-//     let arr = []
-//   for(let i = 0; i < listId.length; i++) {
-//     arr[i] = {
-//       'id': listId[i].dataset.id,
-//       'experience': years[i].innerText
-//    }
-
-//   }
-//   list = arr
-// }
-
-// console.log(list)
-
-// let arrrr = [1, 2, 3]
-
-
-// let aa = doIt
-// console.log(aa())
-
-
-let obj2 = {
-  skills: list
-}
 
 
 

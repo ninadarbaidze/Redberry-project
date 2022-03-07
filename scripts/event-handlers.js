@@ -16,7 +16,7 @@ function changePage (arrow) {
     formSections[index].classList.remove('active');
     detailsSections[index].classList.remove('active-detail');
     
-    if (arrow === 'next') {
+    if (arrow === 'next' && checkValidation(index)) {
         index++;
     } else if (arrow === 'prev' && index === 0) {
         location.href = "/Redberry-project/index.html"
