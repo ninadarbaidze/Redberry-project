@@ -1,4 +1,4 @@
-//create options for select input
+//create options for skills select input
 function createOptions(id, title) {
     let skillsInput = document.getElementById('skills');
 
@@ -37,23 +37,12 @@ async function getSkills() {
 getSkills();
 
 
-//add & remove skills
-
-
-let addSkillsButton = document.getElementById('add-skills');
-let addRemoveUlList = document.getElementById('add-remove');
-let yearsOfExperience = document.getElementById('experience-years');
-
-
-// let arr = []
-// let obj = {}
-
 //add skills
 addSkillsButton.addEventListener('click', addSkillsContainer)
 
 function addSkillsContainer() {
 
-        //check years of experience validation
+        //validation for years of experience 
     setSuccess(skillsInput);
     if(yearsOfExperience.value === '') {
         setError(yearsOfExperience, '*this field is required');
@@ -110,12 +99,5 @@ function addSkillsContainer() {
                 
             }
 
-            // obj['id'] = option.id
-            // obj['experience'] = yearsOfExperience.value
-
-            // console.log(obj)
-
-        // let mome = document.getElementsByClassName()
+        
 }
-
-

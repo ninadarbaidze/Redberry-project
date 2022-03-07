@@ -187,9 +187,7 @@ function checkDevTalks() {
 }
 
   
-    
-
-
+//set error function
 
 function setError(element, message) {
     const inputControl = element.parentElement;
@@ -198,16 +196,13 @@ function setError(element, message) {
     element.classList.add('error-input');    
 }
 
+//set error function for radio buttons
 
 function setRadioError(message, x) {
-    // const inputControl = element.parentElement;
-    // const errorDisplay = inputControl.querySelector('.radio-error');
     radioError[x].innerHTML = message;
 }
 
-function setRadioSuccess(x) {
-    radioError[x].innerHTML = '';
-}
+//set success funtion
 
 function setSuccess(element) {
     const inputControl = element.parentElement;
@@ -215,5 +210,12 @@ function setSuccess(element) {
     errorDisplay.innerHTML = '';
     element.classList.remove('error-input');    
 }
+
+//set success for radio buttons
+function setRadioSuccess(x) {
+    radioError[x].innerHTML = '';
+}
+
+
 
 

@@ -1,9 +1,26 @@
-
-//change section handlers
+//change sections
 prevArrowButton.addEventListener('click', () => {changePage('prev')});
-
 nextArrowButton.addEventListener('click', () => {changePage('next')});
 
+//hide or show date inpus based on true|false
+covidPositive.addEventListener('click', () => {
+    manageCovidDate('positive-covid');
+});
+
+covidNegative.addEventListener('click', () => {
+    manageCovidDate('negative-covid');
+});
+
+vaccinePositive.addEventListener('click', () => {
+    manageCovidDate('positive-vaccine');
+});
+
+vaccineNegative.addEventListener('click', () => {
+    manageCovidDate('negative-vaccine');
+});
+
+//go back button from submit page
+goBackButton.addEventListener('click', goBack);
 
 
 
@@ -41,8 +58,6 @@ function changePage (arrow) {
 
 
 
-goBackButton.addEventListener('click', goBack);
-
 function goBack() {
     formSections[4].classList.remove('active');
     circles[4].classList.remove('circle-bold');
@@ -51,3 +66,24 @@ function goBack() {
     navigation.classList.add('active');
 
 }
+
+
+
+const manageCovidDate = (answer) => {
+    switch(answer) {
+        case 'positive-covid':
+            return (hiddenContainer[0].style.display = 'block')
+        case 'negative-covid':
+            hadCovidAt.value = ''
+            return hiddenContainer[0].style.display = 'none'
+        case 'positive-vaccine':
+            return hiddenContainer[1].style.display = 'block';
+        case 'negative-vaccine':
+            vaccinatedAt.value = ''
+            return hiddenContainer[1].style.display = 'none';
+       
+    };
+}
+
+
+
