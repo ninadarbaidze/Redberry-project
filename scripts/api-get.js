@@ -45,7 +45,8 @@ let addRemoveUlList = document.getElementById('add-remove');
 let yearsOfExperience = document.getElementById('experience-years');
 
 
-
+// let arr = []
+// let obj = {}
 
 //add skills
 addSkillsButton.addEventListener('click', addSkillsContainer)
@@ -69,23 +70,30 @@ function addSkillsContainer() {
 
     createSkillsContainerLi.innerHTML = `
             <p class="skill-name">${option.value}</p>
-            <p class="years-experience">Years of Experience: ${yearsOfExperience.value}</p> 
-            <p class="years"></p>
+            <p class="years-experience">Years of Experience: </p><p class="years">${yearsOfExperience.value}</p> 
                 <button id="dltbtn-${option.id}">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#FE3B1F" d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6 13h-12v-2h12v2z"/></svg>                                   
                 </button>
             
             `;
             createSkillsContainerLi.setAttribute('id', `li-${option.id}`)
+            createSkillsContainerLi.setAttribute('class', `choosen-skills-li`)
+            createSkillsContainerLi.setAttribute('data-id', `${option.id}`)
+
 
             let ifLiExists = Array.from(document.querySelectorAll(`[id*=li-${option.id}]`))
 
+            
             //check if skills already exists
             if(ifLiExists.length >= 1) {
                 return;
             } else {
                 addRemoveUlList.append(createSkillsContainerLi);
+                
+                
             }
+
+
 
             //delete specific skill
             let deleteSkillbutton = document.getElementById(`dltbtn-${option.id}`);
@@ -102,7 +110,12 @@ function addSkillsContainer() {
                 
             }
 
+            // obj['id'] = option.id
+            // obj['experience'] = yearsOfExperience.value
 
+            // console.log(obj)
 
-        
+        // let mome = document.getElementsByClassName()
 }
+
+

@@ -74,12 +74,12 @@ function checkPersonalInfo() {
             setSuccess(email);
         };
 
-     if (!isValidNumber(numberValue)) {
+     if (numberValue === '') {
+        setSuccess(number);
+        } else if(!isValidNumber(numberValue)) {
             setError(number, '*please provide a valid number')
             valid = false
-        } else {
-            setSuccess(number);
-        };      
+     }
 
     return valid;
 
@@ -126,7 +126,7 @@ function CheckCovid() {
         setRadioSuccess(1);
     }
 
-    if(vaccinePositive.checked !== true && vaccinePositive.checked !== true) {
+    if(vaccinePositive.checked !== true && vaccineNegative.checked !== true) {
         setRadioError('*this field is required', 2)
         valid = false;
     } else {
