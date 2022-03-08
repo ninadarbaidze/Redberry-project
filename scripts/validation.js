@@ -99,7 +99,7 @@ function checkSkills() {
             valid = false;
     } else {
         setSuccess(yearsOfExperience);
-        setSuccess(skillsInput)
+        setSuccess(skillsInput);
     }
     return valid;
 }

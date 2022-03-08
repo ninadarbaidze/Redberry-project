@@ -21,16 +21,21 @@ const idList = []
 const titleList = []
 
 async function getSkills() {
-    const response = await fetch(apiUrl);
-    const data = await response.json()
 
-    for (let i = 0; i < data.length; i++) {
-        idList[i] = data[i].id;
-        titleList[i] = data[i].title;
-    }
+    try {
+        const response = await fetch(apiUrl);
+        const data = await response.json();
 
-    createOptions(idList, titleList)
+        for (let i = 0; i < data.length; i++) {
+            idList[i] = data[i].id;
+            titleList[i] = data[i].title;
+        }
+    
+        createOptions(idList, titleList)
 
+    } catch(error) {
+        console.log(error)
+    };
 
 } 
 
@@ -42,18 +47,29 @@ addSkillsButton.addEventListener('click', addSkillsContainer)
 
 function addSkillsContainer() {
 
-        //validation for years of experience 
-    setSuccess(skillsInput);
-    if(yearsOfExperience.value === '') {
-        setError(yearsOfExperience, '*this field is required');
-        return;
-    } else {
-            setSuccess(yearsOfExperience);
-    }
-    
-
     let skillSelectInput = document.getElementById('skills');
     let option = skillSelectInput.options[skillSelectInput.selectedIndex];
+
+    //validation for years of experience 
+        setSuccess(skillsInput);
+
+            //if user doesn't choose any skills, there will be an error
+        if(skillSelectInput.value === 'skills'){
+            setError(skillsInput, '*you should choose and add at least 1 skill')
+            return
+        } else {
+                setSuccess(skillsInput);
+        }
+
+            //experience years validation
+        if(yearsOfExperience.value === '') {
+            setError(yearsOfExperience, '*this field is required');
+            return;
+        } else {
+            setSuccess(yearsOfExperience);
+        }
+    
+    
     
     let createSkillsContainerLi = document.createElement('li');
 
@@ -81,7 +97,6 @@ function addSkillsContainer() {
                 
                 
             }
-
 
 
             //delete specific skill

@@ -48,6 +48,8 @@ form h2 {
 
 
 
+
+
 .mixed-form {
     font-family: inherit;
     font-family: inherit;
@@ -134,11 +136,15 @@ textarea {
     background-position-y: 50%;
 }
 
+select option {
+    background-color: white;
+}
+
 
 
 .skills-button {
     position: absolute;
-    width: 14rem;
+    width: 16rem;
     height: 2.8rem;
     background: #FE3B1F;
     color: white;
@@ -146,6 +152,7 @@ textarea {
     size: 0.7rem;
     border: none;
     margin: 2rem;
+    margin-left: 17.5rem;
     cursor: pointer;
     transition: 0.3s;
 }

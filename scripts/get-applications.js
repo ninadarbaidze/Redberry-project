@@ -2,10 +2,16 @@
 let appData;
 const appPageUrl = "https://bootcamp-2022.devtest.ge/api/applications?token=ebd3b7e7-4c03-40b9-b463-fc84e548dd61"
 async function getApplications() {
-    const appResponse = await fetch(appPageUrl);
-    appData = await appResponse.json();
-    populateForm(appData);
 
+    try {
+        const appResponse = await fetch(appPageUrl);
+        appData = await appResponse.json();
+        populateForm(appData);
+    
+    } catch(error) {
+        console.log(error)
+    };
+    
 }
 
 getApplications()

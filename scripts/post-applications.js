@@ -2,6 +2,7 @@
 async function submitForm(event) {
     event.preventDefault(); 
     window.location.href = '/Redberry-project/pages/thank-you.html'
+
     //call function with returns list of choosen skills
     getSkillList();
 
@@ -31,30 +32,40 @@ async function submitForm(event) {
         //check if hadCovitAt and hadVaccinatedAt date inputs are empty, delete property from objet
         if(hadCovidAt.value === '' || hadCovidAt.value === null) {
           delete data['had_covid_at']
-        } 
+        };
+
         if(vaccinatedAt.value === '' || vaccinatedAt.value === null) {
           delete data['vaccinated_at']
-        }
+        };
 
         //check if devtalks theme value is empty, delete devtalk_topic
         if(devtalk_topic.value === '' || devtalk_topic.value === null) {
             delete data['devtalk_topic']
-          } 
+        }; 
 
+        //check if number value is empty, delete number
+        // if(phone.value === '') {
+        //   phone.value = null
+        // };  
 
-
-    const response = await fetch(
-      "https://bootcamp-2022.devtest.ge/api/application",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",	
-        },
-        body: JSON.stringify(data)
-      }
-    );
+        try {
+            const response = await fetch(
+              "https://bootcamp-2022.devtest.ge/api/application",
+              {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",	
+                },
+                body: JSON.stringify(data)
+              }
+            );
+          }  catch(error) {
+            console.log(error)
+          };
     
   }
+
+
   
   myForm.addEventListener("submit", submitForm);
   
