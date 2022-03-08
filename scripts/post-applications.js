@@ -1,7 +1,7 @@
 //submit form
 async function submitForm(event) {
     event.preventDefault(); 
-
+    window.location.href = '/Redberry-project/pages/thank-you.html'
     //call function with returns list of choosen skills
     getSkillList();
 

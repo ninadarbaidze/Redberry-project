@@ -85,7 +85,7 @@ function populateForm(obj) {
     
         
         applicationSection.innerHTML = ` <section class="submitted-applications" id="submitted-applications">
-            <div class="app-head">
+            <div class="app-head" data-headId=${index}>
                 <p class="submitted-form-id">${index}</p>
             </div>
 
@@ -190,5 +190,43 @@ function populateForm(obj) {
 
 
 
+
+//ჩაკეცვა, ამოკეცვა
+
+let appHead = Array.from(document.querySelectorAll('.app-head'))
+let appBody = document.getElementsByClassName('app-body');
+console.log(appHead)
+
+for (let i = 0; i < appHead.length; i++) {
+    appHead[i].addEventListener('click', () => {
+        closeAppSection(i)
+    })
 }
+
+
+function closeAppSection(ind) {
+
+    for (let i = 0; i < appHead.length; i++) {
+        if(ind === i && appBody[i].style.display === 'none') {
+            appBody[i].style.display = 'grid'
+            appHead[i].style['background-color'] = '#F05039';
+            appHead[i].style.backgroundImage = dropDownIconLeft;
+
+
+
+        } else if(ind === i && appBody[i].style.display !== 'none') {
+            appBody[i].style.display = 'none'
+            appHead[i].style['background-color'] = '#FE3B1F';
+            appHead[i].style.backgroundImage = dropDownIconStartPosition;
+            
+
+        }
+    };
+   
+    }
+
+
+
+}
+
 

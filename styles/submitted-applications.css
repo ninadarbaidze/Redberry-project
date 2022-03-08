@@ -35,6 +35,7 @@ h4 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-bottom: 0.5rem;
 
 }
 
@@ -49,7 +50,9 @@ h4 {
     background-position-y: 50%;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
+
 
 .app-body {
     display: grid;
@@ -58,6 +61,7 @@ h4 {
     padding-left: 10rem;
     padding-top: 2rem;
     box-sizing: border-box;
+    display: none;
 }
 
 
