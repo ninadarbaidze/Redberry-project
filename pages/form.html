@@ -19,7 +19,7 @@
 
     <script src="/Redberry-project/scripts/validation.js" defer></script>
     <script src="/Redberry-project/scripts/app.js" defer></script>
-    <script src="/Redberry-project/scripts/api-get.js" defer></script>
+    <script src="/Redberry-project/scripts/get-skills.js" defer></script>
     <script src="/Redberry-project/scripts/api-post.js" defer></script>
     <!-- <script src="/Redberry-project/scripts/form-logic.js" defer></script> -->
     <script src="/Redberry-project/scripts/event-handlers.js" defer></script>
@@ -69,7 +69,7 @@
                         <h2>Tell us about your skills</h2>
                         <div>
                             <select name="skills" id="skills"  required> 
-                                <option value="" disabled selected hidden >Skills</option>
+                                <option value="skills" disabled selected hidden >Skills</option>
                           
                             </select>
                             <p class="error"></p>
@@ -135,12 +135,12 @@
                                 <p>Did you contact covid 19? :(</p>
                                 
                                 <div class="radio-btn">
-                                    <input type="radio" id="ycovid" name="had_covid" value="true">
+                                    <input type="radio" id="ycovid" name="had_covid" value="yes">
                                     <label for="ycovid">Yes</label>
                                 </div>
 
                                 <div class="radio-btn">
-                                    <input type="radio" id="ncovid" name="had_covid" value="false">
+                                    <input type="radio" id="ncovid" name="had_covid" value="no">
                                     <label for="ncovid">No</label>
                                 </div>    
                                 <p class="radio-error"></p>
@@ -161,12 +161,12 @@
                                 <p>Have you been vaccinated?</p>
 
                                 <div class="radio-btn">
-                                    <input type="radio" id="yvaccinated" name="vaccinated" value="true">
+                                    <input type="radio" id="yvaccinated" name="vaccinated" value="yes">
                                     <label for="yvaccinated">Yes</label>
                                 </div>    
 
                                 <div class="radio-btn">
-                                    <input type="radio" id="nvaccinated" name="vaccinated" value="false">
+                                    <input type="radio" id="nvaccinated" name="vaccinated" value="no">
                                     <label for="nvaccinated">No</label>
                                 </div>
                                 <p class="radio-error"></p>
@@ -194,21 +194,21 @@
                             <p>Would you attend Devtalks and maybe also organize your own?</p>
                             
                             <div class="radio-btn">
-                                <input type="radio" id="ydevtalks" name="will_organize_devtalk" value="true">
+                                <input type="radio" id="ydevtalks" name="will_organize_devtalk" value="yes">
                                 <label for="ydevtalks">Yes</label>
                             </div>
 
                             <div class="radio-btn">
-                                <input type="radio" id="ndevtalks" name="will_organize_devtalk" value="false">
+                                <input type="radio" id="ndevtalks" name="will_organize_devtalk" value="no">
                                 <label for="ndevtalks">No</label>
                             </div>    
                             <p class="radio-error"></p>
 
                         </div>
 
-                        <div class="content">
+                        <div class="content dev-talks">
                             <p>What would you speak about at Devtalk?</p>
-                            <textarea name="devtalk_topic" id="devtalk_topic" placeholder="I would..." cols="80" rows="10" required></textarea>
+                            <textarea name="devtalk_topic" id="devtalk_topic" placeholder="I would..." cols="80" rows="10"></textarea>
                             <p class="error" style="top: 0.2rem; right: 4rem"></p>
 
                         </div>

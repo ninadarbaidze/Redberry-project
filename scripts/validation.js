@@ -169,7 +169,7 @@ function checkDevTalks() {
         setRadioSuccess(3);
     };
 
-    if(devThemeValue === '') {
+    if(orginizedDevtalks.checked === true && devTheme.value === '') {
         setError(devTheme, '*this field is required')
         valid = false;
     } else {

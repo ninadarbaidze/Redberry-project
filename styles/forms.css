@@ -345,7 +345,8 @@ h2 {
 .page-3,
 .page-4,
 .submit,
-.hidden {
+.hidden,
+.dev-talks {
     display: none;
 }
 

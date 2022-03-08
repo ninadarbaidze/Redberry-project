@@ -55,7 +55,9 @@ let devTheme = document.getElementById('devtalk_topic');
 let special = document.getElementById('something_special');
 
 let years = document.getElementsByClassName('years');
-let listId = document.getElementsByClassName('choosen-skills-li');
+// let listId = document.getElementsByClassName('choosen-skills-li');
+
+let devTalkContainer = document.getElementsByClassName('dev-talks')
 
 //get form
 let myForm = document.getElementById('forms')
@@ -66,5 +68,18 @@ let addRemoveUlList = document.getElementById('add-remove');
 let yearsOfExperience = document.getElementById('experience-years');
 
 
+//applications page
+let mainPage = document.getElementById('container')
+let listId = document.getElementsByClassName('choosen-skills-li');
+let skillsetAppcontainer = document.getElementsByClassName('skillset-container');
+    
+    //check correct radio buttons
+let workRadio = document.getElementsByClassName('work-radio');
+let covidBoolean = document.getElementsByClassName('covid-boolean');
+let vaccineBoolean = document.getElementsByClassName('vaccine-boolean');
+let devtalkBoolean = document.getElementsByClassName('devtalks-boolean');
 
-
+    //for clearing values that equals null
+let hadCovidParagraph = document.getElementsByClassName('had-covid');
+let hadVaccineParagraph = document.getElementsByClassName('had-vaccine');
+let devtalksParagraph = document.getElementsByClassName('will-devtalk');

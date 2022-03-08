@@ -12,7 +12,7 @@ async function submitForm(event) {
     let devTalks = document.querySelector('input[name="will_organize_devtalk"]:checked');
 
       const data = {
-          token: "5e8ac05b-0975-414f-afde-3879acd2e4f0",
+          token: "ebd3b7e7-4c03-40b9-b463-fc84e548dd61",
           first_name: userName.value,
           last_name: surname.value,
           email: email.value,
@@ -36,7 +36,13 @@ async function submitForm(event) {
           delete data['vaccinated_at']
         }
 
-        
+        //check if devtalks theme value is empty, delete devtalk_topic
+        if(devtalk_topic.value === '' || devtalk_topic.value === null) {
+            delete data['devtalk_topic']
+          } 
+
+
+
     const response = await fetch(
       "https://bootcamp-2022.devtest.ge/api/application",
       {

@@ -2,7 +2,7 @@
 prevArrowButton.addEventListener('click', () => {changePage('prev')});
 nextArrowButton.addEventListener('click', () => {changePage('next')});
 
-//hide or show date inpus based on true|false
+//hide or show date inpus based on covid page true|false
 covidPositive.addEventListener('click', () => {
     manageCovidDate('positive-covid');
 });
@@ -18,6 +18,19 @@ vaccinePositive.addEventListener('click', () => {
 vaccineNegative.addEventListener('click', () => {
     manageCovidDate('negative-vaccine');
 });
+
+
+
+//hide or show date inpus based on devtalks page true|false
+orginizedDevtalks.addEventListener('click', () => {
+    manageDevtalks('iWould');
+});
+
+notOrginizedDevtalks.addEventListener('click', () => {
+    manageDevtalks('iWouldNot');
+});
+
+
 
 //go back button from submit page
 goBackButton.addEventListener('click', goBack);
@@ -86,4 +99,12 @@ const manageCovidDate = (answer) => {
 }
 
 
-
+const manageDevtalks = (answer) => {
+    switch(answer) {
+        case 'iWould':
+            return devTalkContainer[0].style.display = 'block'
+        case 'iWouldNot':
+            devTheme.value = ''
+            return devTalkContainer[0].style.display = 'none'
+    }
+}
