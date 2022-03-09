@@ -1,13 +1,13 @@
 //submit form
 async function submitForm(event) {
     event.preventDefault(); 
-    window.location.href = '/Redberry-project/pages/thank-you.html'
+    // window.location.href = '/Redberry-project/pages/thank-you.html'
 
     //call function with returns list of choosen skills
     getSkillList();
 
     //get radio buttons
-    let workPeferenece =document.querySelector('input[name="work_preference"]:checked')
+    let workPeferenece =document.querySelector('input[name="work_preference"]:checked');
     let covid = document.querySelector('input[name="had_covid"]:checked');
     let vaccine = document.querySelector('input[name="vaccinated"]:checked');
     let devTalks = document.querySelector('input[name="will_organize_devtalk"]:checked');
@@ -39,14 +39,14 @@ async function submitForm(event) {
         };
 
         //check if devtalks theme value is empty, delete devtalk_topic
-        if(devtalk_topic.value === '' || devtalk_topic.value === null) {
+        if(devTheme.value === '' || devTheme.value === null) {
             delete data['devtalk_topic']
         }; 
 
         //check if number value is empty, delete number
-        // if(phone.value === '') {
-        //   phone.value = null
-        // };  
+        if(number.value === '' || number.value === null) {
+          delete data['phone'];
+        };  
 
         try {
             const response = await fetch(
@@ -69,7 +69,7 @@ async function submitForm(event) {
   
   myForm.addEventListener("submit", submitForm);
   
-  //get skill id and experience
+  //get skill id and experience, it's used above
   let list = [];
   function getSkillList() {
     for(let i = 0; i < listId.length; i++) {

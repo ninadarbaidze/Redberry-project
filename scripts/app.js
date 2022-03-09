@@ -84,6 +84,7 @@ let devtalkBoolean = document.getElementsByClassName('devtalks-boolean');
 let hadCovidParagraph = document.getElementsByClassName('had-covid');
 let hadVaccineParagraph = document.getElementsByClassName('had-vaccine');
 let devtalksParagraph = document.getElementsByClassName('will-devtalk');
+let numbersParagraph = document.getElementsByClassName('number')
 
 let dropDownIconLeft = `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" transform="rotate(270)" width="15" height="15" viewBox="0 0 24 24"><path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" style="fill:%23FFFFFF;"/></svg>')`
 let dropDownIconStartPosition = `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" transform="rotate(90)" width="15" height="15" viewBox="0 0 24 24"><path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" style="fill:%23FFFFFF;"/></svg>')`

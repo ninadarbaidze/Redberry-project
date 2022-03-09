@@ -79,6 +79,10 @@ function clearEmtyValues(prop, obj) {
         devtalksParagraph[propIndex].children[0].innerText = ''
     };
 
+    if(prop['phone'] === null) {
+        numbersParagraph[propIndex].children[7].innerText = '-'
+    };
+
 }
 
 //create form application dropdown sections
@@ -101,7 +105,7 @@ function populateForm(obj) {
 
                 <div class="personal-information">
                     <h3>Personal information</h3>
-                    <div class="grid-2col">
+                    <div class="grid-2col number">
                         <p>Firstname</p> <p>${prop['first_name']}</p>
                         <p>Lastname</p> <p>${prop['last_name']}</p>
                         <p>E Mail</p> <p>${prop['email']}</p>
@@ -197,11 +201,10 @@ function populateForm(obj) {
 
 
 
-//ჩაკეცვა, ამოკეცვა
+//dropdown click handler
 
 let appHead = Array.from(document.querySelectorAll('.app-head'))
 let appBody = document.getElementsByClassName('app-body');
-console.log(appHead)
 
 for (let i = 0; i < appHead.length; i++) {
     appHead[i].addEventListener('click', () => {
@@ -213,23 +216,20 @@ for (let i = 0; i < appHead.length; i++) {
 function closeAppSection(ind) {
 
     for (let i = 0; i < appHead.length; i++) {
-        if(ind === i && appBody[i].style.display === 'none') {
-            appBody[i].style.display = 'grid'
-            appHead[i].style['background-color'] = '#F05039';
-            appHead[i].style.backgroundImage = dropDownIconLeft;
-
-
-
-        } else if(ind === i && appBody[i].style.display !== 'none') {
+        if(ind === i && appBody[i].style.display === 'grid') {
             appBody[i].style.display = 'none'
             appHead[i].style['background-color'] = '#FE3B1F';
             appHead[i].style.backgroundImage = dropDownIconStartPosition;
             
 
-        }
+        } else if(ind === i) {
+            appBody[i].style.display = 'grid'
+            appHead[i].style['background-color'] = '#F05039';
+            appHead[i].style.backgroundImage = dropDownIconLeft;
+        };
     };
    
-    }
+};
 
 
 
