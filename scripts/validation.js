@@ -80,7 +80,9 @@ function checkPersonalInfo() {
         } else if(!isValidNumber(numberValue)) {
             setError(number, '*please provide a valid number')
             valid = false
-     };
+        } else {
+            setSuccess(number);
+        };
 
     return valid;
 

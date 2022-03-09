@@ -89,4 +89,4 @@ let dropDownIconStartPosition = `url('data:image/svg+xml;utf8,<svg xmlns="http:/
 
 
 //if page refreshes, data will clear
-// document.getElementById("form").reset(); 
+// document.getElementById("forms").reset(); 

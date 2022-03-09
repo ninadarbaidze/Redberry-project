@@ -13,7 +13,7 @@ async function submitForm(event) {
     let devTalks = document.querySelector('input[name="will_organize_devtalk"]:checked');
 
       const data = {
-          token: "faf3444b-260d-4ae9-b608-c4697534b55a",
+          token: "48f1e62b-782c-49bd-aea8-cb415f3ddb76",
           first_name: userName.value,
           last_name: surname.value,
           email: email.value,

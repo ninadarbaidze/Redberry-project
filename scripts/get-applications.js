@@ -1,6 +1,6 @@
 //get submitted application data
 let appData;
-const appPageUrl = "https://bootcamp-2022.devtest.ge/api/applications?token=faf3444b-260d-4ae9-b608-c4697534b55a"
+const appPageUrl = "https://bootcamp-2022.devtest.ge/api/applications?token=48f1e62b-782c-49bd-aea8-cb415f3ddb76"
 async function getApplications() {
 
     try {
@@ -46,17 +46,17 @@ function choosenRadioButton(prop , obj) {
     let propIndex = obj.indexOf(prop);
 
     //check for boolean type values
-    prop['had_covid'] === true ? covidBoolean[propIndex].children[0].style.background = 'black' : covidBoolean[propIndex].children[2].style.background = 'black';
-    prop['vaccinated'] === true ? vaccineBoolean[propIndex].children[0].style.background = 'black' : vaccineBoolean[propIndex].children[2].style.background = 'black';
-    devtalkBoolean['will_organize_devtalk'] === true ? devtalkBoolean[propIndex].children[0].style.background = 'black' : devtalkBoolean[propIndex].children[2].style.background = 'black';
+    prop['had_covid'] === true ? covidBoolean[propIndex].children[0].children[0].style.display = 'inline-block' : covidBoolean[propIndex].children[2].children[0].style.display = 'inline-block';
+    prop['vaccinated'] === true ? vaccineBoolean[propIndex].children[0].children[0].style.display = 'inline-block' : vaccineBoolean[propIndex].children[2].children[0].style.display = 'inline-block';
+    prop['will_organize_devtalk'] === true ? devtalkBoolean[propIndex].children[0].children[0].style.display = 'inline-block' : devtalkBoolean[propIndex].children[2].children[0].style.display = 'inline-block';
     
     //check for work preference values
     if(prop['work_preference'] === "from_office") {
-        workRadio[propIndex].children[0].style.background = 'black';
+        workRadio[propIndex].children[0].children[0].style.display = 'inline-block';
     } else if(prop['work_preference'] === "from_home") {
-        workRadio[propIndex].children[2].style.background = 'black';
+        workRadio[propIndex].children[2].children[0].style.display = 'inline-block';
     } else {
-        workRadio[propIndex].children[4].style.background = 'black';
+        workRadio[propIndex].children[4].children[0].style.display = 'inline-block';
     };
     
 }
@@ -119,7 +119,6 @@ function populateForm(obj) {
 
                 <div class="skillset">
                     <h3>Skillset</h3>
-                    <h4>Covid Situation</h4>
                     <div class="skillset-container">
 
                     </div>
@@ -133,15 +132,15 @@ function populateForm(obj) {
                     <h3>Covid Situation</h3>
                     <h4>How would you prefer to work?</h4>
                     <div class="grid-2col-circle work-radio">
-                        <span class="circle"></span> <p>From Sairme Office</p>
-                        <span class="circle"></span> <p>From Home</p>
-                        <span class="circle"></span> <p>Hybrid</p>
+                        <span class="circle"><div></div></span> <p>From Sairme Office</p>
+                        <span class="circle"><div></div></span> <p>From Home</p>
+                        <span class="circle"><div></div></span> <p>Hybrid</p>
                     </div>
 
                     <h4>Did you have covid 19?</h4>
                     <div class="grid-2col-circle covid-boolean">
-                        <span class="circle"></span> <p>Yes</p>
-                        <span class="circle"></span> <p>No</p>
+                        <span class="circle"><div></div></span> <p>Yes</p>
+                        <span class="circle"><div></div></span> <p>No</p>
                     </div>
 
                     <h4>When did you have covid 19?</h4>
@@ -151,8 +150,8 @@ function populateForm(obj) {
 
                     <h4>Have you been vaccinated?</h4>
                     <div class="grid-2col-circle vaccine-boolean"->
-                        <span class="circle"></span> <p>Yes</p>
-                        <span class="circle"></span> <p>No</p>
+                        <span class="circle"><div></div></span> <p>Yes</p>
+                        <span class="circle"><div></div></span> <p>No</p>
                     </div>
                    
 
@@ -171,8 +170,8 @@ function populateForm(obj) {
 
                     <h4>Would you attend Devtalks and <br> maybe also orginize your own?</h4>
                     <div class="grid-2col-circle devtalks-boolean">
-                        <span class="circle"></span> <p>Yes</p>
-                        <span class="circle"></span> <p>No</p>
+                        <span class="circle"><div></div></span> <p>Yes</p>
+                        <span class="circle"><div></div></span> <p>No</p>
                     </div>
 
                     <h4>What would you speak about at Devtalk?</h4>

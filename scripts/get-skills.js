@@ -103,7 +103,7 @@ function addSkillsContainer() {
 
 
             function deleteSkillsContainer() {
-                for (let i = 1; i < idList.length; i++) {
+                for (let i = 1; i <= idList.length; i++) {
                     if(deleteSkillbutton.id ===  `dltbtn-${i}`) {
                        let listConntainer =  document.getElementById(`li-${i}`)
                        listConntainer.remove();
