@@ -1,6 +1,6 @@
 //get submitted application data
 let appData;
-const appPageUrl = "https://bootcamp-2022.devtest.ge/api/applications?token=ebd3b7e7-4c03-40b9-b463-fc84e548dd61"
+const appPageUrl = "https://bootcamp-2022.devtest.ge/api/applications?token=faf3444b-260d-4ae9-b608-c4697534b55a"
 async function getApplications() {
 
     try {
