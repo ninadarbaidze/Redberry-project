@@ -85,6 +85,7 @@ function clearEmtyValues(prop, obj) {
 
 }
 
+
 //create form application dropdown sections
 function populateForm(obj) {
 
