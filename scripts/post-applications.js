@@ -1,9 +1,9 @@
 //submit form
 async function submitForm(event) {
     event.preventDefault(); 
-    // window.location.href = '/Redberry-project/pages/thank-you.html'
+    window.location.href = '/Redberry-project/pages/thank-you.html'
 
-    //call function with returns list of choosen skills
+    //call function with returns list of choosen skills, declaired below
     getSkillList();
 
     //get radio buttons
@@ -27,7 +27,7 @@ async function submitForm(event) {
           devtalk_topic: devTheme.value,
           something_special: special.value,
           skills: list
-        }
+        };
 
         //check if hadCovitAt and hadVaccinatedAt date inputs are empty, delete property from objet
         if(hadCovidAt.value === '' || hadCovidAt.value === null) {
@@ -47,6 +47,7 @@ async function submitForm(event) {
         if(number.value === '' || number.value === null) {
           delete data['phone'];
         };  
+        
 
         try {
             const response = await fetch(
@@ -69,7 +70,7 @@ async function submitForm(event) {
   
   myForm.addEventListener("submit", submitForm);
   
-  //get skill id and experience, it's used above
+  //get skill id and experience
   let list = [];
   function getSkillList() {
     for(let i = 0; i < listId.length; i++) {
@@ -79,5 +80,5 @@ async function submitForm(event) {
      }
   
    }
-  return list;
+    return list;
   }

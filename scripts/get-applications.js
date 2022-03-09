@@ -14,7 +14,7 @@ async function getApplications() {
     
 }
 
-getApplications()
+getApplications();
 
 
 //create skillset information div elements
@@ -57,7 +57,7 @@ function choosenRadioButton(prop , obj) {
         workRadio[propIndex].children[2].style.background = 'black';
     } else {
         workRadio[propIndex].children[4].style.background = 'black';
-    }
+    };
     
 }
 
@@ -194,7 +194,7 @@ function populateForm(obj) {
     mainPage.appendChild(applicationSection);
     skillContainerElements(prop);
     choosenRadioButton(prop, obj);
-    clearEmtyValues(prop, obj)
+    clearEmtyValues(prop, obj);
 
 };
 
@@ -202,7 +202,6 @@ function populateForm(obj) {
 
 
 //dropdown click handler
-
 let appHead = Array.from(document.querySelectorAll('.app-head'))
 let appBody = document.getElementsByClassName('app-body');
 

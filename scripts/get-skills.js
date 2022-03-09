@@ -9,7 +9,7 @@ function createOptions(id, title) {
         optionList.setAttribute('class', 'option-list')
 
         skillsInput.append(optionList);
-    }
+    };
 
     return skillsInput;
 
@@ -29,9 +29,9 @@ async function getSkills() {
         for (let i = 0; i < data.length; i++) {
             idList[i] = data[i].id;
             titleList[i] = data[i].title;
-        }
+        };
     
-        createOptions(idList, titleList)
+        createOptions(idList, titleList);
 
     } catch(error) {
         console.log(error)
@@ -59,7 +59,7 @@ function addSkillsContainer() {
             return
         } else {
                 setSuccess(skillsInput);
-        }
+        };
 
             //experience years validation
         if(yearsOfExperience.value === '') {
@@ -67,7 +67,7 @@ function addSkillsContainer() {
             return;
         } else {
             setSuccess(yearsOfExperience);
-        }
+        };
     
     
     
@@ -81,34 +81,32 @@ function addSkillsContainer() {
                 </button>
             
             `;
-            createSkillsContainerLi.setAttribute('id', `li-${option.id}`)
-            createSkillsContainerLi.setAttribute('class', `choosen-skills-li`)
-            createSkillsContainerLi.setAttribute('data-id', `${option.id}`)
+            createSkillsContainerLi.setAttribute('id', `li-${option.id}`);
+            createSkillsContainerLi.setAttribute('class', `choosen-skills-li`);
+            createSkillsContainerLi.setAttribute('data-id', `${option.id}`);
 
 
-            let ifLiExists = Array.from(document.querySelectorAll(`[id*=li-${option.id}]`))
+            let ifLiExists = Array.from(document.querySelectorAll(`[id*=li-${option.id}]`));
 
             
             //check if skills already exists
             if(ifLiExists.length >= 1) {
                 return;
             } else {
-                addRemoveUlList.append(createSkillsContainerLi);
-                
-                
-            }
+                addRemoveUlList.append(createSkillsContainerLi);   
+            };
 
 
             //delete specific skill
             let deleteSkillbutton = document.getElementById(`dltbtn-${option.id}`);
-            deleteSkillbutton.addEventListener('click', deleteSkillsContainer)
+            deleteSkillbutton.addEventListener('click', deleteSkillsContainer);
 
 
             function deleteSkillsContainer() {
                 for (let i = 1; i < idList.length; i++) {
                     if(deleteSkillbutton.id ===  `dltbtn-${i}`) {
                        let listConntainer =  document.getElementById(`li-${i}`)
-                       listConntainer.remove()
+                       listConntainer.remove();
                     };
                 };
                 

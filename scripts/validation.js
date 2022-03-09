@@ -1,4 +1,4 @@
-//email and phone validation regex
+//email validation 
 const isValidEmail = (email) => {
     return String(email)
       .toLowerCase()
@@ -6,13 +6,14 @@ const isValidEmail = (email) => {
         /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
       );
   };
+
   const isValidNumber = (num) => {
     let clearNum = num.replace(/\s|\-|\.|\_/g,'');
     let regEx = /^\+9955[0-9]{8}$/g;
     return regEx.test(clearNum);
     };
 
-
+//phone validation
 function checkValidation(index) {
      
     switch(index) {
@@ -27,14 +28,14 @@ function checkValidation(index) {
 
         case 3:
         return checkDevTalks();
-    }
+    };
     
     
 }
 
 
 
-//Check PAGE 1
+//Check PAGE 1 - Personal Information
 
 function checkPersonalInfo() {
     let valid = true;
@@ -79,7 +80,7 @@ function checkPersonalInfo() {
         } else if(!isValidNumber(numberValue)) {
             setError(number, '*please provide a valid number')
             valid = false
-     }
+     };
 
     return valid;
 
@@ -87,7 +88,7 @@ function checkPersonalInfo() {
 
 
 
-//Check PAGE 2
+//Check PAGE 2 - Skillset
 
 function checkSkills() {
     let valid = true;
@@ -100,13 +101,13 @@ function checkSkills() {
     } else {
         setSuccess(yearsOfExperience);
         setSuccess(skillsInput);
-    }
+    };
     return valid;
 }
   
 
 
-//Check PAGE 3
+//Check PAGE 3 - Covid Stuff
 
 function CheckCovid() {
     let valid = true;
@@ -116,7 +117,7 @@ function CheckCovid() {
         valid = false;
     } else {
         setRadioSuccess(0);
-    }
+    };
 
 
     if(covidPositive.checked !== true && covidNegative.checked !== true) {
@@ -124,14 +125,14 @@ function CheckCovid() {
         valid = false;
     } else {
         setRadioSuccess(1);
-    }
+    };
 
     if(vaccinePositive.checked !== true && vaccineNegative.checked !== true) {
         setRadioError('*this field is required', 2)
         valid = false;
     } else {
         setRadioSuccess(2);
-    }
+    };
 
 
     if(hiddenContainer[0].style.display === "block" && hadCovidAt.value === '') {
@@ -139,14 +140,14 @@ function CheckCovid() {
         valid = false;
     } else {
         setSuccess(hadCovidAt)
-    }
+    };
 
     if(hiddenContainer[1].style.display === "block" && vaccinatedAt.value === '') {
         setError(vaccinatedAt, '*this field is required')
         valid = false;
     } else {
         setSuccess(vaccinatedAt)
-    }
+    };
 
 
     return valid;
@@ -155,7 +156,7 @@ function CheckCovid() {
 
 
 
-//Check PAGE 4
+//Check PAGE 4 - About Yourself
 
 function checkDevTalks() {
     let valid = true;
@@ -188,7 +189,6 @@ function checkDevTalks() {
 
   
 //set error function
-
 function setError(element, message) {
     const inputControl = element.parentElement;
     const errorDisplay = inputControl.querySelector('.error');
@@ -196,20 +196,21 @@ function setError(element, message) {
     element.classList.add('error-input');    
 }
 
-//set error function for radio buttons
 
+//set error function for radio buttons
 function setRadioError(message, x) {
     radioError[x].innerHTML = message;
 }
 
-//set success funtion
 
+//set success funtion
 function setSuccess(element) {
     const inputControl = element.parentElement;
     const errorDisplay = inputControl.querySelector('.error');
     errorDisplay.innerHTML = '';
     element.classList.remove('error-input');    
 }
+
 
 //set success for radio buttons
 function setRadioSuccess(x) {

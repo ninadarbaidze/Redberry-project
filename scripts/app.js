@@ -17,7 +17,7 @@ let circles = Array.from(document.querySelectorAll('.circle'));
 //get error p
  
 let errorMessage = document.getElementsByClassName('error');
-let radioError = document.getElementsByClassName('radio-error')
+let radioError = document.getElementsByClassName('radio-error');
 
 
 // get personal info
@@ -55,8 +55,6 @@ let devTheme = document.getElementById('devtalk_topic');
 let special = document.getElementById('something_special');
 
 let years = document.getElementsByClassName('years');
-// let listId = document.getElementsByClassName('choosen-skills-li');
-
 let devTalkContainer = document.getElementsByClassName('dev-talks')
 
 //get form
@@ -70,7 +68,7 @@ let skillHide = document.getElementById('skill-hide');
 
 
 //applications page
-let mainPage = document.getElementById('container')
+let mainPage = document.getElementById('container');
 let listId = document.getElementsByClassName('choosen-skills-li');
 let skillsetAppcontainer = document.getElementsByClassName('skillset-container');
     
@@ -84,10 +82,11 @@ let devtalkBoolean = document.getElementsByClassName('devtalks-boolean');
 let hadCovidParagraph = document.getElementsByClassName('had-covid');
 let hadVaccineParagraph = document.getElementsByClassName('had-vaccine');
 let devtalksParagraph = document.getElementsByClassName('will-devtalk');
-let numbersParagraph = document.getElementsByClassName('number')
+let numbersParagraph = document.getElementsByClassName('number');
 
 let dropDownIconLeft = `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" transform="rotate(270)" width="15" height="15" viewBox="0 0 24 24"><path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" style="fill:%23FFFFFF;"/></svg>')`
 let dropDownIconStartPosition = `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" transform="rotate(90)" width="15" height="15" viewBox="0 0 24 24"><path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" style="fill:%23FFFFFF;"/></svg>')`
 
 
+//if page refreshes, data will clear
 // document.getElementById("form").reset(); 

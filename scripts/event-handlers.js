@@ -2,6 +2,7 @@
 prevArrowButton.addEventListener('click', () => {changePage('prev')});
 nextArrowButton.addEventListener('click', () => {changePage('next')});
 
+
 //hide or show date inpus based on covid page true|false
 covidPositive.addEventListener('click', () => {
     manageCovidDate('positive-covid');
@@ -36,7 +37,7 @@ notOrginizedDevtalks.addEventListener('click', () => {
 goBackButton.addEventListener('click', goBack);
 
 
-
+//handling change sections event
 function changePage (arrow) {
     const activePage = document.querySelector('.active');
 
@@ -61,16 +62,14 @@ function changePage (arrow) {
     if(index === 4) {
         circlesNavigation[0].style.display = "none";
 
-    } 
-    
-    else {
+    } else {
         detailsSections[index].classList.add('active-detail');
     };
 
 }
 
 
-
+//handling go back button from submit page
 function goBack() {
     formSections[4].classList.remove('active');
     circles[4].classList.remove('circle-bold');
@@ -81,7 +80,7 @@ function goBack() {
 }
 
 
-
+// hide and show dates, based on choosen true/false
 const manageCovidDate = (answer) => {
     switch(answer) {
         case 'positive-covid':
@@ -106,7 +105,7 @@ const manageDevtalks = (answer) => {
         case 'iWouldNot':
             devTheme.value = ''
             return devTalkContainer[0].style.display = 'none'
-    }
+    };
 }
 
 
